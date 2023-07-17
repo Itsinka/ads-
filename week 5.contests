@@ -1,0 +1,126 @@
+501
+#include <iostream>
+
+using namespace std;
+int main() {
+    int n, m, a[100][100];
+    cin >> n >> m;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
+        }
+    }
+    int min = a[0][0];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (min > a[i][j]) {
+                min = a[i][j];
+            }
+        }
+    }
+    cout << min;
+
+    return 0;
+}
+
+502
+#include <iostream> 
+  
+int sum_d1 = 0, sum_d2 = 0, n; 
+  
+int main() { 
+    std::cin >> n; 
+    int arr[n][n]; 
+    for (int i = 0, j = 0; i < n; i += ++j / n, j %= n) { 
+        std::cin >> arr[i][j]; 
+        sum_d1 += (j != i ? 0 : arr[i][j]); 
+        sum_d2 += (j != n - i - 1 ? 0 : arr[i][j]); 
+         
+    } 
+    std::cout << sum_d1 << ' ' << sum_d2 << '\n'; 
+    return 0; 
+}
+
+503
+#include <iostream> 
+using namespace std; 
+int main() { 
+  int n, k, m = 0, i, j, q = 0; 
+  int a[100][100]; 
+  cin >> n; 
+  cin >> k; 
+  for (i = 0; i < n; i++) { 
+    for (j = 0; j < k; j++) { 
+      cin >> a[i][j]; 
+    } 
+  } 
+  for (i = 0; i < n; i++) { 
+    for (j = 0; j < k; j++) { 
+      if (a[i][j] == 0) { 
+        m = i + 1; 
+          q = j + 1; 
+      } 
+    } 
+  } 
+  cout << m << " " << q; 
+}
+
+504
+#include <iostream>
+using namespace std;
+int main(){
+  int n, m, n1=-1, m1=-1;
+  cin>>n>>m;
+  int arr[n][m];
+  for(int i=0; i<n; i++){
+    for(int j=0; j<m; j++){
+      cin>>arr[i][j];
+      if(arr[i][j]==-1){
+        n1=i+1;
+        m1=j+1;
+      }
+    }
+  }
+  cout<<n1<<" "<<m1;
+  return 0;
+}
+
+505
+#include <iostream> 
+using namespace std; 
+int main() { 
+    int n; 
+    int i = 0, j = 0; 
+    cin >> n; 
+        int x[100][100]; 
+        int y[100][100]; 
+        int z[100][100]; 
+        for (i = 0; i < n; i++) { 
+            for (j = 0; j < n; j++) { 
+                cin >> x[i][j]; 
+            } 
+        } 
+ 
+        for (i = 0; i < n; i++) { 
+            for (j = 0; j < n; j++) { 
+                cin >> y[i][j]; 
+            } 
+        } 
+ 
+        for (i = 0; i < n; i++) { 
+            for (j = 0; j < n; j++) { 
+                z[i][j] = x[i][j] + y[i][j]; 
+            } 
+        } 
+ 
+        cout << endl; 
+ 
+        for (i = 0; i < n; i++) { 
+            for (j = 0; j < n; j++) { 
+                cout << z[i][j] << " "; 
+            } 
+            cout << endl; 
+        } 
+    }
+
+506
